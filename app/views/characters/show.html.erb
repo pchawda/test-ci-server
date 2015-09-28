@@ -1,0 +1,23 @@
+<div class='col-md-12'>
+  <div class='col-md-1'></div>
+  <div class='col-md-10'>
+    <div class='col-md-11 well'>
+      <div class='row'>
+        <div class='col-md-11'>
+          <h4>Show</h4>
+          <h3><strong> <%= @show.title.upcase %> </strong></h3>
+        </div>
+      </div>
+
+      <div class='row character-view'>
+        <div class='col-md-11'>
+          <h4>Character</h4>
+          <h3><strong><%= @character.name.humanize %></strong></h3>
+          <h5><strong><%= @character.description.html_safe %></strong></h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

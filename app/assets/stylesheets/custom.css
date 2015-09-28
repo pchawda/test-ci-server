@@ -1,0 +1,130 @@
+.container-row{
+  min-height: 400px;
+}
+
+.login_links {
+  display: inline;
+  float: right;
+  padding: 15px;
+}
+.form-group label.error {
+  color: #FB3A3A;
+  display: inline-block;
+  text-align: unset;
+}
+
+.talent-client-image{
+  height: 200px;
+  width: 200px !important;
+  background-color: #eeeeee;
+  padding-left: 0 !important;
+}
+
+.add-new-talent{
+  margin-bottom: 46px;
+  margin-right: 77px;
+}
+
+.talent-client-info p{
+  width: 80%;
+}
+
+.talent-group{
+  margin-bottom: 50px;
+}
+.talent-client-show .talent-client-details{
+  border-left: 1px dotted #666666;
+  min-height: 500px;
+}
+
+.talent-client-show .talent-client-img{
+  height: 500px;
+  width: 400px;
+}
+
+.show-group:hover{
+  background-color: #2f2f2f;
+}
+
+.show-group{
+  text-align: center;
+  background-color: #fff;
+  font-family: "ff-scala-sans-web-sc",Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  margin-top: 3px;
+  text-transform: capitalize;
+}
+
+.show-group .stage-name{
+  color: #888;
+}
+
+.show-group .music-by{
+  color: #888;
+}
+
+.show-group .title{
+  color: #ed1c24;
+}
+
+.show-group:hover .title{
+  color: #fff;
+}
+
+.show.dropdown{
+  cursor: pointer;
+  position: absolute;
+  right: 42px;
+  top: 3px;
+  z-index: 99;
+}
+
+.show.dropdown{
+  color: #888;
+}
+
+.drop-left{
+  left: auto !important;
+  right: 0 !important;
+}
+
+.shows-page .show-right{
+  min-height: 500px;
+}
+
+.shows-page .show-stage-details{
+  border-top: 4px solid #d6d6d7;
+}
+
+.shows-page .show-stage-details .play-info-stage{
+  font-family: "ff-scala-sans-web-sc",Arial,sans-serif;
+  font-size: 18px;
+  text-transform: lowercase;
+}
+
+.min-height-show-left{
+  min-height: 500px !important;
+}
+
+.word-wrap{
+  word-wrap: break-word;
+}
+
+/*Character class*/
+
+.show-group .description{
+  color: #888;
+}
+
+.show-group .name{
+  color: #ed1c24;
+}
+
+.show-group:hover .name{
+  color: #fff;
+}
+
+.character-view{
+  border-top: 3px solid #c9c9c9;
+}

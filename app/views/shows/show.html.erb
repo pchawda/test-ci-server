@@ -1,0 +1,24 @@
+<div class='col-md-12 shows-page'>
+  <div class='col-md-9 show-left'>
+    <div class='col-md-11 well min-height-show-left'>
+      <div class='row'>
+        <div class='col-md-11'>
+          <h3><strong> <%= @show.title.upcase %> </strong></h3>
+          <blockquote>
+            <p><small>By <%= @show.by.titlecase %></small></p>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class='row show-stage-details'>
+        <div class='col-md-11 play-info-stage'>
+          <h5><strong><%= @show.stage %></strong></h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class='col-md-3 show-right well'>
+  </div>
+</div>
+

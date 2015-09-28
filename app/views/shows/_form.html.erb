@@ -1,0 +1,35 @@
+ <%= form_for(show, html: { class: 'form-horizontal', multipart: true }) do |f| %>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="title">Title:</label>
+    <div class="col-sm-8">
+      <%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "Title..." %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="by">By:</label>
+    <div class="col-sm-8">
+      <%= f.text_field :by, class: "form-control", placeholder: "By..." %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="music_by">Music By:</label>
+    <div class="col-sm-8">
+      <%= f.text_field :music_by, class: "form-control", placeholder: "Music by" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="stage">Stage:</label>
+    <div class="col-sm-8">
+      <%= f.text_field :stage, class: "form-control", placeholder: "Stage" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-4 col-sm-8">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+<% end %>
+

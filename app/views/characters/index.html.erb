@@ -1,0 +1,35 @@
+<h2>Available Characters for show "<%= @show.title %>" </h2>
+<p class='add-new-talent'>
+  <%= link_to "New Show Characters", new_show_character_path(@show), 'data-no-turbolink' => true, class: 'btn btn-primary pull-right' %>
+</p>
+
+<% @characters.each_slice(4) do |group_char| %>
+  <div class='row'>
+    <div class='col-md-12'>
+      <% group_char.each_with_index do |character, index| %>
+        <div class='col-md-3'>
+          <div class="dropdown show">
+            <i class="fa fa-cog dropdown-toggle" data-toggle="dropdown"></i>
+            <ul class="dropdown-menu drop-left">
+              <li><%= link_to "View", show_character_path(@show, character) %></li>
+              <li><%= link_to "Edit", edit_show_character_path(@show, character) %></li>
+              <li><%= link_to "Delete", show_character_path(@show, character), 'data-confirm'=>"Are you sure?", method: :delete %></li>
+            </ul>
+          </div>
+          <%= link_to show_character_path(@show, character) do %>
+            <div class='col-md-11 well show-group'>
+              <p class='name'><%= character.name %></p>
+              <p class='description word-wrap'><%= truncate(strip_tags(character.description), length: 100, separator: ' ') %></p>
+
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+<div class='pull-right'>
+  <%#= paginate @shows, :window => 2 %>
+</div>
+
+

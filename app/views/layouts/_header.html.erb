@@ -1,0 +1,21 @@
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Thca</a>
+      <% if user_signed_in? %>
+        <%= link_to "Talent Client", talent_clients_path, class: "navbar-brand" %>
+        <%= link_to "Shows", shows_path, class: "navbar-brand" %>
+      <% end %>
+    <div class='login_links'>
+      <% if user_signed_in? %>
+        <%= link_to "Log Out", destroy_user_session_path, class: 'btn btn-default', method: :delete %>
+      <% else %>
+        <%= link_to "Log in", user_session_path, class: 'btn btn-default' %>
+      <% end %> 
+    </div>
+  </div>   
+</div>

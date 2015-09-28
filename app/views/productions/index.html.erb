@@ -1,0 +1,35 @@
+<h2>Available Productions</h2>
+<p class='add-new-talent'>
+  <%= link_to "New Show", new_show_production_path(@show.slug), class: 'btn btn-primary pull-right' %>
+</p>
+
+<% @productions.each_slice(4) do |group_prod| %>
+  <div class='row'>
+    <div class='col-md-12'>
+      <% group_prod.each_with_index do |prod, index| %>
+        <div class='col-md-3'>
+          <div class="dropdown show">
+            <i class="fa fa-cog dropdown-toggle" data-toggle="dropdown"></i>
+            <ul class="dropdown-menu drop-left">
+              <li><%= link_to "View", show_production_path(@show.slug) %></li>
+              <li><%= link_to "Edit", edit_show_production_path(@show.slug, prod.slug) %></li>
+              <li><%= link_to "Delete", show_path(show.slug), 'data-confirm'=>"Are you sure?", method: :delete %></li>
+              <li><%= link_to "Characters", show_characters_path(show.slug) %></li>
+              <li><%= link_to "Productions", show_productions_path(show.slug) %></li>
+            </ul>
+          </div>
+          <%= link_to "#" do %>
+            <div class='col-md-11 well show-group'>
+              <p class='title'><%= show.title %></p>
+              <p class='music-by'><%= show.music_by %></p>
+              <p class='stage-name'><%= show.stage %></p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+<div class='pull-right'>
+  <%= paginate @shows, :window => 2 %>
+</div>

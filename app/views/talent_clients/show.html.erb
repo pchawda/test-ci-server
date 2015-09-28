@@ -1,0 +1,22 @@
+<div class='col-md-12 talent-client-show'>
+  <div class='col-md-6'>
+    <%= image_tag @talent_client.profile_image.url(:medium), class: 'talent-client-img pull-right' %>
+  </div>
+  <div class='col-md-6 talent-client-details'>
+    <div class='row'>
+      <div class='col-md-10'>
+        <h1><strong><%= @talent_client.full_name %></strong></h1>
+        <small><strong><%= @talent_client.talent_names.join(", ") %></strong></small>
+        <blockquote>
+          <p>"<%= @talent_client.quote %>"</p><p><small><%= @talent_client.quoter %></small></p>
+        </blockquote>
+
+        <div class='col-md-12'>
+          <%= @talent_client.bio.html_safe %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,38 @@
+<% if @talent_clients.present? %>
+  <p class='add-new-talent'>
+    <%= link_to "Add New Talent Client", new_talent_client_path, class: 'btn btn-primary pull-right',  'data-no-turbolink' => 'true'  %>
+  </p>
+  <% @talent_clients.each_slice(4) do |group_talent_client| %>
+    <div class='row'>
+      <div class='col-md-12 talent-group'>
+        <% group_talent_client.each do |talent_client| %>
+          <div class='col-md-3'>
+            <div class='row'>
+              <div class='col-md-10 talent-client-image'>
+                <%= link_to (image_tag talent_client.profile_image.url(:thumb), alt: talent_client.full_name), talent_client_path(talent_client) %>
+              </div>
+            </div>
+            <div class='row talent-client-info'>
+              <p><%= talent_client.full_name %></p>
+              <p><%= truncate(strip_tags(talent_client.bio), length: 50, omission: '...') %></p>
+              <p>
+                <%= link_to "View", talent_client_path(talent_client), class: 'btn btn-primary' %>
+                <%= link_to "Edit", edit_talent_client_path(talent_client), class: 'btn btn-success', 'data-no-turbolink' => 'true' %>
+                <%= link_to "Delete", talent_client_path(talent_client), class: 'btn btn-danger', 'data-confirm'=>"Are you sure?", method: :delete %>
+              </p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <div class='pull-right'>
+    <%= paginate @talent_clients, :window => 2 %>
+  </div>
+<% else %>
+  <div class="col-xs-5 col-xs-offset-4">
+    <span>
+      <h2>There is no talent client added <%= link_to "Click Here", new_talent_client_path %> to add new talent client</h2>
+    </span>
+  </div>
+<% end %>

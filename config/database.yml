@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: thca_dev
+  pool: 5
+  host: localhost
+  username: postgres
+  password: postgres
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: thca_test
+  host: localhost
+  pool: 5
+  username: postgres
+  password: postgres
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: thca_pro
+  pool: 5
+  host: localhost
+  username: postgres
+  password: postgres
