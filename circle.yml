@@ -1,4 +1,6 @@
 machine:
   ruby:
     version: ruby-2.2.0-preview1
-script: bundle exec rspec spec
+test:
+  override:
+    - bundle exec rspec spec/
